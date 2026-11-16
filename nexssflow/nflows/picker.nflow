@@ -1,0 +1,4 @@
+@description "Generic native file picker action"
+@require github.com/nexssp/desktop/nexssflow
+
+{ title: "Choose a text file", filters: [{ name: "Text files", pattern: "*.txt" }] } -> nexss.desktop.pick_file
