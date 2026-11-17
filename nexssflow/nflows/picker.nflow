@@ -1,4 +1,12 @@
-@description "Generic native file picker action"
-@require github.com/nexssp/desktop/nexssflow
+@description "Choose one source file and report cancellation explicitly"
+@require github.com/nexssp/desktop/nexssflow v0.1.0
 
-{ title: "Choose a text file", filters: [{ name: "Text files", pattern: "*.txt" }] } -> nexss.desktop.pick_file
+{
+  title: "Choose a Go source or module file",
+  filters: [{ name: "Go source and modules", pattern: "*.go;*.mod" }]
+}
+-> nexss.desktop.pick_file
+-> {
+  cancelled: .path == "",
+  path: .path
+}

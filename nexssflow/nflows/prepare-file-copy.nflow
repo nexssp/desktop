@@ -1,0 +1,37 @@
+@description "Choose a source file and destination folder, then return a plan only"
+@require github.com/nexssp/desktop/nexssflow v0.1.0
+
+{
+  title: "Choose a file to copy",
+  filters: [{ name: "Documents", pattern: "*.txt;*.pdf" }]
+}
+-> nexss.desktop.pick_file as source
+-> match(source.path) {
+  "" -> const @{ value: {
+      status: "cancelled",
+      cancelled_at: "source_file",
+      source_path: "",
+      destination_folder: ""
+  } },
+  _
+    -> (
+    { title: "Choose a destination folder" }
+    -> nexss.desktop.pick_folder as destination
+    -> match(destination.path) {
+      ""
+        -> {
+        status: "cancelled",
+        cancelled_at: "destination_folder",
+        source_path: source.path,
+        destination_folder: ""
+      },
+      _
+        -> {
+        status: "ready",
+        cancelled_at: "",
+        source_path: source.path,
+        destination_folder: destination.path
+      }
+    }
+  )
+}

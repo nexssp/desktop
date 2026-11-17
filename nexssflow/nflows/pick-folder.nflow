@@ -1,0 +1,9 @@
+@description "Choose one output folder and report cancellation explicitly"
+@require github.com/nexssp/desktop/nexssflow v0.1.0
+
+{ title: "Choose an output folder" }
+-> nexss.desktop.pick_folder
+-> {
+  cancelled: .path == "",
+  path: .path
+}
