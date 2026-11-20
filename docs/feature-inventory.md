@@ -56,4 +56,4 @@ The runnable interactive fixtures are in [`nexssflow/nflows/`](../nexssflow/nflo
 
 The repository also has focused Go tests for each core area and for the adapter; their exact coverage is in the linked test files. The Windows native-dialog and hotkey operations are platform-specific and are not exercised by the portable picker/shortcut parser tests.
 
-The module declares Go `1.27.4` and uses Flow `0.80.1` (`go.mod`). Repository quality checks are defined in [Taskfile.yml](../Taskfile.yml) and CI invokes the repository gate in [`.github/workflows/ci.yml`](../.github/workflows/ci.yml).
+The module declares Go `1.27.4` and uses Flow `0.93.0` with Kernel `0.40.3` (`go.mod`). Repository quality checks are defined in [Taskfile.yml](../Taskfile.yml) and CI invokes the repository gate in [`.github/workflows/ci.yml`](../.github/workflows/ci.yml).

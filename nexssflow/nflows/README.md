@@ -4,7 +4,7 @@ These examples demonstrate the **three actions actually registered** by the opti
 
 ## Prerequisites
 
-- Nexss Flow CLI **v0.80.1**, the Flow version declared by desktop `v0.1.0`.
+- Nexss Flow CLI **v0.93.0**, matching the Flow version declared in this checkout's `go.mod`.
 - A Go toolchain satisfying the module's `go 1.27.4` requirement. Flow's `@require` builds a Go harness for the adapter when needed.
 - Network access on the first run so Go can resolve `github.com/nexssp/desktop/nexssflow` at tag `v0.1.0` and any uncached dependencies.
 - Windows with an interactive desktop session for the default native dialogs. The adapter's default `Bundle` uses `desktop.NativePicker`; on other platforms the picker actions return an unavailable error. A custom Go Flow host can instead register `nexssflow.NewBundle` with its own supported `Picker` implementation.

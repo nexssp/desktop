@@ -1,5 +1,5 @@
 @description "Choose one or more project folders and report cancellation explicitly"
-@require github.com/nexssp/desktop/nexssflow v0.1.0
+@require github.com/nexssp/desktop/nexssflow@v0.1.0
 
 { title: "Choose project folders" }
 -> nexss.desktop.pick_folders

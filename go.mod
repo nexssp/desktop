@@ -3,8 +3,8 @@ module github.com/nexssp/desktop
 go 1.27.4
 
 require (
-	github.com/nexssp/flow v0.80.1
-	github.com/nexssp/kernel v0.39.1
+	github.com/nexssp/flow v0.93.0
+	github.com/nexssp/kernel v0.40.3
 	golang.org/x/sys v0.50.0
 )
 
